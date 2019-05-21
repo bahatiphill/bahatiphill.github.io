@@ -1,0 +1,100 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+body {
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #566b78;
+}
+
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+h1 {
+  padding-top: 1em;
+}
+
+h1,
+h2,
+strong {
+  color: #333;
+}
+
+a {
+    color: #3a76ff;
+}
+
+
+/* pre code */
+
+
+code,
+pre {
+  background: #f5f7f9;
+  color: blue;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  padding: 1em;
+  border-left: 2px solid #69c;
+}
+
+
+
+
+
+/*Mine*/
+.featured-image {
+  width: 100%;
+}
+
+
+.date {
+  display: inline-block;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    background-color: #0d69be;
+    border: 1px solid #0d69be;
+    color: #fff;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+img {
+  width: 100%;
+}
+
+
+
+/*Contact Page */
+
+.centering {
+    text-align: center;
+    
+    
+}
+
+.centering img {
+    display: inline-block;
+    height: 90px;
+    vertical-align: top;
+    width: 90px;
+}
