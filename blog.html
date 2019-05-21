@@ -5,12 +5,13 @@ title: Blog | BahatiPhill
 
 <ul>
     {% for post in site.posts %}
-    <li>
         <h2>
             <a href="{{ post.url}}">{{post.title}}</a>
         </h2>
+        <img src="{{post.featured-image}}" alt="{{post.featured-image-alt}}"/>
+        <small>{{ post.date | date_to_string }}</small>
         <p>{{ post.excerpt}}</p>
         <a class="btn" href="{{ post.url}}">Read More</a>
-    </li>
+    
     {% endfor %}
 </ul>

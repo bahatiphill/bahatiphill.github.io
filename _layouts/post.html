@@ -1,9 +1,13 @@
 ---
 layout: default
+permalink: /blog/:title
 ---
 <h1>{{ page.title}}</h1>
+<img src="{{page.featured-image}}" alt="{{page.featured-image-alt}}"/>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 <div class="post">
     {{ content }}
+<br>
+<a class="btn" href="blog.html">back on blog</a>
 </div>
