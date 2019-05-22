@@ -1,7 +1,8 @@
 ---
 layout: default
-permalink: /blog/:title
+permalink: /:title/
 ---
+
 <h1>{{ page.title}}</h1>
 <img src="{{page.featured-image}}" alt="{{page.featured-image-alt}}"/>
 <p class="meta">{{ page.date | date_to_string }}</p>
@@ -9,5 +10,5 @@ permalink: /blog/:title
 <div class="post">
     {{ content }}
 <br>
-<a class="btn" href="blog.html">back on blog</a>
+<a class="btn" href="/blog/"><<< Back</a>
 </div>

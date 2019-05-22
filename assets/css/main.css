@@ -5,14 +5,14 @@ body {
     max-width: 50em;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     line-height: 1.5;
-    padding: 4em 1em;
+    padding: 0em 0em;
     color: #566b78;
 }
 
 
 h2 {
-    margin-top: 1em;
-    padding-top: 1em;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
 }
 
 h1 {
@@ -63,6 +63,9 @@ pre {
   display: inline-block;
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+}
 
 .btn {
     display: inline-block;
@@ -98,3 +101,18 @@ img {
     vertical-align: top;
     width: 90px;
 }
+
+nav {
+  text-align: right;
+  background-color: #566b78;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-right: 0.5em;
+  
+}
+
