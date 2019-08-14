@@ -5,7 +5,8 @@ date: 2014-04-30
 featured-image: /assets/images/home_background.jpg
 featured-image-alt: Mike the Blogger speaking at Times Square, New York City, New York
 tags: [jekyll, facebook, openGraph]
-summary: "Well. Finally got around to putting this old website together. Neat thing about it - powered by Well.Finally got around to putting this old website together. Neat thing about it - powered by"
+summary: "Well. Finally got around to putting this old website together. Neat thing about it - powered by Well.Finally got around to putting this old website together."
+permalink: /blog/:title/
 ---
 
 

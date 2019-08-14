@@ -7,6 +7,10 @@
       <meta charset="UTF-8">
       <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
+      {%if page.tags %}
+      <meta name="keywords" content="{{ page.tags | join: ', ' | escape }}"/>
+      {%endif %}
+
       <!--Twitter cards-->
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@bahatiphill" />
