@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <!-- Mobile Specific Meta -->
+		  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  		<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+
+      <!--Twitter cards-->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@bahatiphill" />
+      <meta name="twitter:title" content="{{page.title}}" />
+      <meta name="twitter:description" content="{{ page.summary }}" />
+      <meta name="twitter:image" content="{{page.featured-image}}" />
+
+      <!--OpenGrap tags-->
+      <meta property="og:site_name" content="Bahati Phill" />
+      <meta property="og:type" content="article" /> 
+      <meta property="og:title" content="{{page.title}}" />
+      <meta property="og:description" content="{{ page.summary }}" />
+      <meta property="og:image" content="{{page.featured-image}}" /> 
+      <meta property="og:url" content="{{ site.url }}/blog{{page.url}}" />
+
+    </head>
+    <body>
+      
+      {{ content }}
+    </body>
+</html>
+
