@@ -4,21 +4,21 @@ title: "Monitoring Twitter with ELK Stack"
 date: 2019-08-22
 featured-image: /assets/images/twitter-elk.jpg
 featured-image-alt: Photo by Con Karampelas on Unsplash
+unsplash-image-owner: Con Karampelas
 tags: [twitter, elk, logstash, kibana, elasticsearch]
 summary: "started to play with its data through its APIs it offers to developers. I come up with this idea of watching tweets contain keywords I might be interested in."
 permalink: /blog/:title/
 
 ---
 
+After finding myself spending much time on Twitter than most of the other social media I use, I started to play with its data through its APIs it offers to developers.  I come up with this idea of monitoring tweets contain keywords I might be interested in. Using ELK stack you can choose to monitor buzzwords from "blockchain", "AI", "built with Go" to "storming area 51" :) 
 
-After finding myself spending much time on Twitter than most of the other social media I use, I started to play with its data through its APIs it offers to developers.  I come up with this idea of watching tweets contain keywords I might be interested in. Using ELK stack you can choose to monitor buzzwords from "blockchain", "AI", "built with Go" to "storming area 51" :) 
+At the end of this article, I will use "Rwanda" as an example whereby I am going to get all tweets in real-time that have the word "Rwanda" in their texts then we analyze them to get an insight.
 
-At the end of this article, I will use "Rwanda" as an example. 
-We are going to get all tweets in real-time that have the word "Rwanda" in their texts then we analyze them to get an insight.
+## First of all, what is the ELK stack?
 
-## What is the ELK stack?
-
-ELK stands for Elasticsearch-Logstash-Kibana. It's a stack of open source tools from [Elastic](https://www.elastic.co/) most commonly used in logs collection, analysis, and visualizations. Even though there are many cases you can use ELK such as monitoring your apps, your infrastructure, etc
+ELK stands for Elasticsearch-Logstash-Kibana. It's a stack of open source tools from [Elastic](https://www.elastic.co/) most commonly used in log collection, analysis, and visualizations. Even though there are many cases you can use ELK such as monitoring your apps, your infrastructure, etc.
+and for the stack to achieve this work different numbers of tools are used and in this article, we will explain the role and use of the most popular tools used by the stack.
 
 ## The Role of every tool in the stack.
 
@@ -26,7 +26,7 @@ ELK stands for Elasticsearch-Logstash-Kibana. It's a stack of open source tools 
 
 ![Logstash](/assets/images/logstash.png "Logtsash")
 
-Looking at this image I took from their official website. Some of the inputs Lostash can support are files, Redis, Log4j (a Java-based logging utility), Sqlite, Syslog,  Github, Twitter (which I'm going to use), and Beats (they call them Data Shippers because they are the most commonly used in collecting logs and ship them to Logstash in most scenarios).
+Looking at this image I took from their official website. Some of the inputs Lostash can support are files, Redis, Log4j (a Java-based logging utility), Sqlite, Syslog,  Github, Twitter (which I'm going to use), and Beats (they call them **Data Shippers** because they are the most commonly used in collecting logs and ship them to Logstash in most scenarios).
 
 
 **Elasticsearch**: This is the cornerstone of the stack, it is a RESTful search engine, it stores the data come from Logstash. It is a full-text search that you can go far beyond querying data and aggregation to find trends and patterns in your data.
@@ -72,7 +72,7 @@ $ sudo systemctl start elasticsearch.service
 
 To check if everything is alright you can send a request to elasticsearch on its RESTful API to see what is going inside.
 ```
-curl -X GET "localhost:9200"
+$ curl -X GET "localhost:9200"
 ```
 
 You should get a response similar to this, with a tagline saying ["You Know, for Search"](https://www.elastic.co/blog/you-know-for-search-inc).
@@ -108,7 +108,7 @@ Since I'm also an open-source fanboy, I'm installing OpenJDK version 11 which Lo
 $ sudo apt-get install openjdk-11-jre
 ```
 
-You can check if now you have java on your server by running 
+Now you can check if you have java on your server by running 
 ```
 $ java -version
 ```
@@ -164,7 +164,7 @@ The first thing you should do is to test if your configuration doesn't have synt
 ```
 the **"-t"** check for errors and exit.
 
-if everything is OK, now you can start the Logstash so it can ingest data in Elasticsearch.
+if everything is OK, you can start the Logstash so it can ingest data in Elasticsearch.
 
 ```
 $ sudo systemctl start logstash.service
@@ -195,7 +195,7 @@ Since Kibana runs on localhost, port 5601. I want to access it on my local compu
 Let's install Nginx  and configure it to run as a reverse proxy 
 
 ```
-apt-get install nginx
+$ sudo apt-get install nginx
 ```
 
 Configure the reverse proxy in /etc/nginx/sites-available/kibana_rev file.
@@ -247,3 +247,12 @@ Location of people tweeted tweets contain word Rwanda in those 3 days.
 
 Most mentioned handlers in those 3 days.
 ![handlers](/assets/images/mentioned_users.png)
+
+With well-written [elastic documentation](https://www.elastic.co/guide/index.html), you can do more with ELK, you just sit down and read.
+For people who don't want to run Elasticsearch on their own, Elastic provides "Elastic as service". you pay and everything is managed for you.
+
+There is much to share from this, but the intention was to use the ELK, see how the tools are interconnected and how to configure them just to have the stack running in a short time.
+
+Out there, they are many Monitoring tools I want to try out myself like [Grafana](https://grafana.com/) ,[Graphite](http://graphiteapp.org/) and [Icinga](https://icinga.com/).
+
+I guess I will find time to play and write about them.

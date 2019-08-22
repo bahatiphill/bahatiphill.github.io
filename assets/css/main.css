@@ -13,6 +13,7 @@ body {
 h2 {
     margin-top: 0.5em;
     padding-top: 0.5em;
+    color: #333
 }
 
 h1 {
@@ -26,7 +27,7 @@ strong {
 }
 
 a {
-    color: #142e5e;
+    color: #1d71f0;
     text-decoration: none;
 }
 
@@ -37,7 +38,7 @@ a {
 code,
 pre {
   background: #f5f7f9;
-  color: blue;
+  color: #142e5e;
 }
 
 code {
@@ -117,3 +118,11 @@ nav a {
   
 }
 
+.unsplash-image-owner {
+  color: #000000;
+  font-size: 10px;
+}
+
+.date-class {
+  color: #000000;
+}
