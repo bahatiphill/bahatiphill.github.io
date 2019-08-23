@@ -224,7 +224,8 @@ restart Nginx for change to take effect
 ```
 $ sudo systemctl restart nginx.service
 ```
-Now hit your server IP in your favorite browser...boom.
+Now hit your server IP in your favorite browser.
+Create a new index in Kibana, I called mine 'tweets-'. boom...
 
 ![kibana](/assets/images/rwanda_data.png)
 
