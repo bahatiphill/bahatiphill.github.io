@@ -6,7 +6,7 @@ featured-image: /assets/images/twitter-elk.jpg
 featured-image-alt: Photo by Con Karampelas on Unsplash
 unsplash-image-owner: Con Karampelas
 tags: [twitter, elk, logstash, kibana, elasticsearch]
-summary: "started to play with its data through its APIs it offers to developers. I come up with this idea of watching tweets contain keywords I might be interested in."
+summary: "started to play with its data through its APIs it offers to developers. I come up with the idea of watching tweets contain keywords I might be interested in."
 permalink: /blog/:title/
 
 ---
@@ -20,7 +20,7 @@ At the end of this article, I will use "Rwanda" as an example whereby I am going
 ELK stands for Elasticsearch-Logstash-Kibana. It's a stack of open source tools from [Elastic](https://www.elastic.co/) most commonly used in log collection, analysis, and visualizations. Even though there are many cases you can use ELK such as monitoring your apps, your infrastructure, etc.
 and for the stack to achieve this work different numbers of tools are used and in this article, we will explain the role and use of the most popular tools used by the stack.
 
-## The Role of every tool in the stack.
+## The Role of each tool in the stack.
 
 **Logstash**: Logstash is the first entry data flow in ELK. It accepts data from different sources, normalizes them, then sends them to the destination of your choices such as CSV file,  WebSockets, S3, MongoDB, Graphite, google_bigquery, Kafka, and Elasticsearch (which we are going to use in this scenario), etc. You can find all the outputs supported by Logstash [here](https://www.elastic.co/guide/en/logstash/current/output-plugins.html).
 
