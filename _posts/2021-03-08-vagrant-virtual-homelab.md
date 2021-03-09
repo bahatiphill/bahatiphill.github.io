@@ -11,11 +11,11 @@ permalink: /blog/:title/
 
 ---
 
-Have you ever wanted to try out a new tech tool, but you don't want to install it and all its dependencies on your computer? It makes sense because you will only need this in one week or two. There's no need to bloat your PC.
+Have you ever wanted to try out a new tech tool, but you don't want to install it and its dependencies on your computer? It makes sense because you will only need this in one week or two. There's no need to bloat your PC.
 
 Because you like to keep your computer clean and quick by not installing tools you don't use daily, you end up spinning new tiny servers on one of your favorite cloud providers such as AWS or DigitalOcean to try the tool out. But, most of the time, you forget to destroy those servers until the billing emails come at the end of the month. Then, you have to pay for a service you only used for three days and forget to turn it off. It happened to all of us.
 
-That's where Vagrant gets useful to me. You spin up a virtual machine from the command line, SSH into it, then you have a new fresh environment to install all the packages and tools you wanted to isolate from your computer in a matter of minutes. Even if you spin up more than 10 to 100 Virtual machines and forget to destroy them after you finish all your activities, No one will charge you at the end of the month for using his cloud resources.
+That’s where Vagrant becomes useful to me. You spin up a virtual machine from the command line, SSH into it, now you have a new fresh environment to install all the packages and tools you wanted to isolate from your computer in a matter of minutes. Even if you spin up more than 10 to 100 Virtual machines and forget to destroy them after you finish all your activities, No one will charge you at the end of the month for using his cloud resources.
 
 ## Then, why not using containers [A.K.A Docker]?
 
@@ -137,7 +137,7 @@ $vagrant ssh
 Now you are into the box, Congrat.
 A new fresh environment to do whatever you want.
 
-[congrat GIF]
+[congrats GIF]
 
 After doing what you want and exiting the virtual machine, you can shut down the VM by using:
 ```
